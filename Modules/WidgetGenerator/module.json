@@ -1,0 +1,17 @@
+{
+    "name": "WidgetGenerator",
+    "alias": "widgetgenerator",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\WidgetGenerator\\Providers\\WidgetGeneratorServiceProvider",
+        "Modules\\WidgetGenerator\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

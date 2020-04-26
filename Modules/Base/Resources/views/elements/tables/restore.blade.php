@@ -1,0 +1,1 @@
+<a href="{{ route($restore, $item->id) }}" class="btn btn-icon btn-info" data-toggle="tooltip" data-original-title="{{ trans('modules.base::tables.restore') }}"><i class="fa fa-restore"></i> {{ trans('modules.base::tables.restore') }}</a>

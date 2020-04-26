@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/shortcode",
+    "description": "Shortcode package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Shortcode\\Providers\\ShortcodeServiceProvider",
+                "Modules\\Shortcode\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Shortcode\\": ""
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Product",
+    "namespace": "Modules\\Plugins\\Product\\",
+    "provider": "Modules\\Plugins\\Product\\Providers\\ProductServiceProvider",
+    "author": "Dũng Gia Lương",
+    "url": "https://facebook.com/nhoanhkhoquen",
+    "version": "5.2.1",
+    "description": "Manage Products, Product categories, Product tags"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Social Login",
+    "namespace": "Modules\\Plugins\\SocialLogin\\",
+    "provider": "Modules\\Plugins\\SocialLogin\\Providers\\SocialLoginServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Social login for CMS"
+}

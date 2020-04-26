@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'model'               => 'Sản Phẩm',
+    'models'              => 'Các Sản Phẩm',
+    'create'              => 'Tạo Sản Phẩm Mới',
+    'edit'                => 'Edit product',
+    'form'                => [
+        'name'                    => 'Tên',
+        'name_placeholder'        => 'Tên sản phẩm (Tối đa :c ký tự)',
+        'description'             => 'Mô tả ngắn',
+        'description_placeholder' => 'Mô tả ngắn cho sản phẩm (Tối đa: c ký tự)',
+        'procategories'              => 'Danh Mục Sản Phẩm',
+        'protags'                    => 'Thẻ',
+        'protags_placeholder'        => 'Thẻ',
+        'content'                 => 'Nội Dung Sản Phẩm',
+        'is_featured'             => 'Sản phẩm nổi bật',
+        'note'                    => 'Nội dung lưu ý',
+        'format_type'             => 'Định dạng',
+    ],
+    'cannot_delete'       => 'Không thể xoá sản phẩm',
+    'product_deleted'        => 'Xoá thành công sản phẩm',
+    'products'               => 'Sản phẩm',
+    'edit_this_product'      => 'Sửa sản phẩm này',
+    'no_new_product_now'     => 'Hiện tại cửa hàng không có sẵn sản phẩm',
+    'menu_name'           => 'Products',
+    'widget_products_recent' => 'Sản phẩm gần đây',
+    'categories'          => 'Danh mục',
+    'author'              => 'Chủ shop',
+];

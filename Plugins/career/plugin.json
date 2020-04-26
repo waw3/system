@@ -1,0 +1,9 @@
+{
+    "name": "Career",
+    "namespace": "Modules\\Plugins\\Career\\",
+    "provider": "Modules\\Plugins\\Career\\Providers\\CareerServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "1.0",
+    "description": "The description for plugin career"
+}

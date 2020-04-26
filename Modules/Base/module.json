@@ -1,0 +1,32 @@
+{
+    "name": "Base",
+    "alias": "base",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Base\\Providers\\BaseServiceProvider",
+        "Modules\\Base\\Providers\\RouteServiceProvider",
+        "Modules\\Base\\Providers\\EventServiceProvider",
+        "Modules\\Base\\Providers\\BreadcrumbsServiceProvider",
+        "Modules\\Base\\Providers\\ComposerServiceProvider",
+        "Modules\\Base\\Providers\\MailConfigServiceProvider",
+        "Modules\\Base\\Providers\\FormServiceProvider"
+    ],
+    "aliases": {
+        "BaseModel": "Modules\\Base\\Models\\BaseModel",
+        "BaseController": "Modules\\Base\\Http\\Controllers\\BaseController",
+        "BaseHttpResponse": "Modules\\Base\\Http\\Responses\\BaseHttpResponse",
+        "Assets": "Modules\\Base\\Facades\\AssetsFacade",
+        "MetaBox": "Modules\\Base\\Facades\\MetaBoxFacade",
+        "Action": "Modules\\Base\\Facades\\ActionFacade",
+        "Filter": "Modules\\Base\\Facades\\FilterFacade",
+        "EmailHandler": "Modules\\Base\\Facades\\EmailHandlerFacade",
+        "MailVariable": "Modules\\Base\\Facades\\MailVariableFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

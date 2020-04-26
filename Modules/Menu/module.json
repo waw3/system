@@ -1,0 +1,19 @@
+{
+    "name": "Menu",
+    "alias": "menu",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Menu\\Providers\\MenuServiceProvider",
+        "Modules\\Menu\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "Menu": "Modules\\Menu\\Facades\\MenuFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

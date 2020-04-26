@@ -1,0 +1,9 @@
+{
+    "name": "Payment",
+    "namespace": "Modules\\Plugins\\Payment\\",
+    "provider": "Modules\\Plugins\\Payment\\Providers\\PaymentServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "1.0",
+    "description": "Payment plugin"
+}

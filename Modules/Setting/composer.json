@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/setting",
+    "description": "",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Setting\\Providers\\SettingServiceProvider",
+                "Modules\\Setting\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Setting": "Modules\\Setting\\Facades\\SettingFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Setting\\": ""
+        }
+    }
+}

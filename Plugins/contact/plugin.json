@@ -1,0 +1,9 @@
+{
+    "name": "Contact Form",
+    "namespace": "Modules\\Plugins\\Contact\\",
+    "provider": "Modules\\Plugins\\Contact\\Providers\\ContactServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Contact Form"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "JsValidation",
+    "alias": "jsvalidation",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 3,
+    "providers": [
+        "Modules\\JsValidation\\Providers\\JsValidationServiceProvider",
+        "Modules\\JsValidation\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "JsValidator": "Modules\\JsValidation\\Facades\\JsValidatorFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

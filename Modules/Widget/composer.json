@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/widget",
+    "description": "Widget package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Widget\\Providers\\WidgetServiceProvider",
+                "Modules\\Widget\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Widget": "Modules\\Widget\\Facades\\WidgetFacade",
+                "WidgetGroup": "Modules\\Widget\\Facades\\WidgetGroupFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Widget\\": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "PluginGenerator",
+    "alias": "plugingenerator",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\PluginGenerator\\Providers\\PluginGeneratorServiceProvider",
+        "Modules\\PluginGenerator\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

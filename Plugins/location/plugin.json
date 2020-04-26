@@ -1,0 +1,9 @@
+{
+    "name": "Location",
+    "namespace": "Modules\\Plugins\\Location\\",
+    "provider": "Modules\\Plugins\\Location\\Providers\\LocationServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "1.0",
+    "description": "The description for module location"
+}

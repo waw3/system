@@ -1,0 +1,9 @@
+{
+    "name": "Request Log",
+    "namespace": "Modules\\Plugins\\RequestLog\\",
+    "provider": "Modules\\Plugins\\RequestLog\\Providers\\RequestLogServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Log error requests"
+}

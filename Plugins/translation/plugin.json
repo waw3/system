@@ -1,0 +1,9 @@
+{
+    "name": "Translation",
+    "namespace": "Modules\\Plugins\\Translation\\",
+    "provider": "Modules\\Plugins\\Translation\\Providers\\TranslationServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Manage translation text"
+}

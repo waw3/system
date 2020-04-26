@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/devtool",
+    "description": "",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\DevTool\\Providers\\DevToolServiceProvider",
+                "Modules\\DevTool\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DevTool\\": ""
+        }
+    }
+}

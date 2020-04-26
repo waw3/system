@@ -1,0 +1,9 @@
+{
+    "name": "Comments",
+    "namespace": "Modules\\Plugins\\Comments\\",
+    "provider": "Modules\\Plugins\\Comments\\Providers\\CommentsServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "1.0",
+    "description": "The description for module comments"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "MaintenanceMode",
+    "namespace": "Modules\\Plugins\\MaintenanceMode\\",
+    "provider": "Modules\\Plugins\\MaintenanceMode\\Providers\\MaintenanceModeServiceProvider",
+    "author": "Sang Nguyen",
+    "url": "https://sangnguyen.info",
+    "version": "5.3",
+    "description": "The description for plugin maintenance_mode"
+}

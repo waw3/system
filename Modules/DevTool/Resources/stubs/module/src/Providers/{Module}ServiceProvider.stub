@@ -1,0 +1,57 @@
+<?php
+
+namespace Modules\Plugins\{Module}\Providers;
+
+use Modules\Plugins\{Module}\Models\{Name};
+use Illuminate\Support\ServiceProvider;
+use Modules\Plugins\{Module}\Repositories\Caches\{Name}CacheDecorator;
+use Modules\Plugins\{Module}\Repositories\Eloquent\{Name}Repository;
+use Modules\Plugins\{Module}\Repositories\Interfaces\{Name}Interface;
+use Modules\Base\Supports\Helper;
+use Event;
+use Modules\Base\Traits\LoadAndPublishDataTrait;
+use Illuminate\Routing\Events\RouteMatched;
+
+class {Module}ServiceProvider extends ServiceProvider
+{
+    use LoadAndPublishDataTrait;
+
+    /**
+     * @var \Illuminate\Foundation\Application
+     */
+    protected $app;
+
+    public function register()
+    {
+        $this->app->bind({Name}Interface::class, function () {
+            return new {Name}CacheDecorator(new {Name}Repository(new {Name}));
+        });
+
+        Helper::autoload(__DIR__ . '/../../helpers');
+    }
+
+    public function boot()
+    {
+        $this->setNamespace('modules.{types}.{-name}')
+            ->loadAndPublishConfigurations(['permissions'])
+            ->loadMigrations()
+            ->loadAndPublishTranslations()
+            ->loadRoutes(['web']);
+
+        Event::listen(RouteMatched::class, function () {
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+                \Language::registerModule([{Name}::class]);
+            }
+
+            dashboard_menu()->registerItem([
+                'id'          => 'cms-{types}-{-name}',
+                'priority'    => 5,
+                'parent_id'   => null,
+                'name'        => 'modules.{types}.{-module}::{-name}.name',
+                'icon'        => 'fa fa-list',
+                'url'         => route('{-name}.index'),
+                'permissions' => ['{-name}.index'],
+            ]);
+        });
+    }
+}

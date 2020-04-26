@@ -1,0 +1,9 @@
+{
+  "name": "Member",
+  "namespace": "Modules\\Plugins\\Member\\",
+  "provider": "Modules\\Plugins\\Member\\Providers\\MemberServiceProvider",
+  "author": "William Whitmire",
+  "url": "https://krackenlabs.com",
+  "version": "5.2",
+  "description": "Manage member, user register/login"
+}

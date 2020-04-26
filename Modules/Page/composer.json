@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/page",
+    "description": "Page package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Page\\Providers\\PageServiceProvider",
+                "Modules\\Page\\Providers\\RouteServiceProvider",
+                "Modules\\Page\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Page\\": ""
+        }
+    }
+}

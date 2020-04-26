@@ -1,0 +1,38 @@
+{
+    "name": "facade/ignition-code-editor",
+    "description": "A code editor for Ignition",
+    "keywords": [
+        "laravel",
+        "ignition",
+        "editor"
+    ],
+    "homepage": "https://github.com/facade/code-editor",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Facade\\CodeEditor\\": "src"
+        }
+    },
+    "scripts": {
+        "format": [
+            "vendor/bin/php-cs-fixer fix"
+        ],
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Facade\\CodeEditor\\CodeEditorServiceProvider"
+            ]
+        }
+    }
+}

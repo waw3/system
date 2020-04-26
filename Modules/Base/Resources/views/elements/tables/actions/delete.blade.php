@@ -1,0 +1,1 @@
+<i class="fa fa-trash"></i> {{ trans('modules.base::tables.delete') }}

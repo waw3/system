@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/widgetgenerator",
+    "description": "Widget generator",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\WidgetGenerator\\Providers\\WidgetGeneratorServiceProvider",
+                "Modules\\WidgetGenerator\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\WidgetGenerator\\": ""
+        }
+    }
+}

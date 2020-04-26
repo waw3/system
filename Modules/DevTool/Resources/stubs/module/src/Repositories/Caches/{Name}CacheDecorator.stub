@@ -1,0 +1,11 @@
+<?php
+
+namespace Modules\Plugins\{Module}\Repositories\Caches;
+
+use Modules\Support\Repositories\Caches\CacheAbstractDecorator;
+use Modules\Plugins\{Module}\Repositories\Interfaces\{Name}Interface;
+
+class {Name}CacheDecorator extends CacheAbstractDecorator implements {Name}Interface
+{
+
+}

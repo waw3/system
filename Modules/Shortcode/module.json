@@ -1,0 +1,17 @@
+{
+    "name": "Shortcode",
+    "alias": "shortcode",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Shortcode\\Providers\\ShortcodeServiceProvider",
+        "Modules\\Shortcode\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

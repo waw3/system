@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/menu",
+    "description": "Menu package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Menu\\Providers\\MenuServiceProvider",
+                "Modules\\Menu\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Menu": "Modules\\Menu\\Facades\\MenuFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Menu\\": ""
+        }
+    }
+}

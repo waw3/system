@@ -1,0 +1,17 @@
+{
+    "name": "Optimize",
+    "alias": "optimize",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Optimize\\Providers\\OptimizeServiceProvider",
+        "Modules\\Optimize\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

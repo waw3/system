@@ -1,0 +1,19 @@
+{
+  "name": "krackenlabs/flex-home",
+  "type": "krackenlabs-theme",
+  "description": "Example theme for CMS",
+  "homepage": "http://krackenlabs.com",
+  "authors": [
+    {
+      "name": "krackenlabs",
+      "homepage": "http://krackenlabs.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Theme\\FlexHome\\": "src/"
+    }
+  }
+}

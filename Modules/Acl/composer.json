@@ -1,0 +1,28 @@
+{
+    "name": "krackenlabs/acl",
+    "description": "ACL package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Acl\\Providers\\AclServiceProvider",
+                "Modules\\Acl\\Providers\\RouteServiceProvider",
+                "Modules\\Acl\\Providers\\EventServiceProvider",
+                "Modules\\Acl\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ACL\\": ""
+        }
+    }
+}

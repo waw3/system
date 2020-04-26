@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/jsvalidation",
+    "description": "Validate forms transparently with Javascript reusing your Laravel Validation Rules, Messages, and FormRequest",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "Modules\\JsValidation\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "JsValidator": "Modules\\JsValidation\\Facades\\JsValidatorFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\JsValidation\\": ""
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/assets",
+    "description": "Laravel assets management",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Assets\\Providers\\AssetsServiceProvider",
+                "Modules\\Assets\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Assets\\": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "ThemeGenerator",
+    "alias": "themegenerator",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\ThemeGenerator\\Providers\\ThemeGeneratorServiceProvider",
+        "Modules\\ThemeGenerator\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

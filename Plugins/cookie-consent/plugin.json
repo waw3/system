@@ -1,0 +1,9 @@
+{
+    "name": "Cookie Consent",
+    "namespace": "Modules\\Plugins\\CookieConsent\\",
+    "provider": "Modules\\Plugins\\CookieConsent\\Providers\\CookieConsentServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Cookie Consent"
+}

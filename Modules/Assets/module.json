@@ -1,0 +1,18 @@
+{
+    "name": "Assets",
+    "alias": "assets",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 4,
+    "providers": [
+        "Modules\\Assets\\Providers\\AssetsServiceProvider",
+        "Modules\\Assets\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

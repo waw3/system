@@ -1,0 +1,9 @@
+{
+  "name": "Vendor",
+  "namespace": "Modules\\Plugins\\Vendor\\",
+  "provider": "Modules\\Plugins\\Vendor\\Providers\\VendorServiceProvider",
+  "author": "William Whitmire",
+  "url": "https://krackenlabs.com",
+  "version": "4.0",
+  "description": "Manage vendor, user register/login"
+}

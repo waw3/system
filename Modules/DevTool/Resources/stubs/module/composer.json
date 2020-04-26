@@ -1,0 +1,20 @@
+{
+  "name": "krackenlabs/{-name}",
+  "description": "{Name} package for CMS application",
+  "type": "package",
+  "autoload": {
+    "psr-4": {
+      "Modules\\Plugins\\{Name}\\": "src"
+    }
+  },
+  "require": {
+
+  },
+  "extra":{
+    "laravel":{
+      "providers":[
+        "Modules\\Plugins\\{Name}\\Providers\\{Name}ServiceProvider"
+      ]
+    }
+  }
+}

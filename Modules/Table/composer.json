@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/table",
+    "description": "Table package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Table\\Providers\\TableServiceProvider",
+                "Modules\\Table\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Table\\": ""
+        }
+    }
+}

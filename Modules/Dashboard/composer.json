@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/dashboard",
+    "description": "Dashboard package for The CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Dashboard\\Providers\\DashboardServiceProvider",
+                "Modules\\Dashboard\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "DashboardMenu": "Modules\\Dashboard\\Facades\\DashboardMenuFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Dashboard\\": ""
+        }
+    }
+}

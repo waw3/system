@@ -1,0 +1,9 @@
+{
+    "name": "Gallery",
+    "namespace": "Modules\\Plugins\\Gallery\\",
+    "provider": "Modules\\Plugins\\Gallery\\Providers\\GalleryServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Create or easy to add gallery images to posts, pages..."
+}

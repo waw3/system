@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/pluginmanagement",
+    "description": "Plugin management package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\PluginManagement\\Providers\\PluginManagementServiceProvider",
+                "Modules\\PluginManagement\\Providers\\RouteServiceProvider",
+                "Modules\\PluginManagement\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\PluginManagement\\": ""
+        }
+    }
+}

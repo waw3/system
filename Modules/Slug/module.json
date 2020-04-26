@@ -1,0 +1,21 @@
+{
+    "name": "Slug",
+    "alias": "slug",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Slug\\Providers\\SlugServiceProvider",
+        "Modules\\Slug\\Providers\\RouteServiceProvider",
+        "Modules\\Slug\\Providers\\FormServiceProvider",
+        "Modules\\Slug\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "SlugHelper": "Modules\\Slug\\Facades\\SlugHelperFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Audit Log",
+    "namespace": "Modules\\Plugins\\AuditLog\\",
+    "provider": "Modules\\Plugins\\AuditLog\\Providers\\AuditLogServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Record activities logs"
+}

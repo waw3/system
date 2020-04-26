@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/media",
+    "description": "Media package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Media\\Providers\\MediaServiceProvider",
+                "Modules\\Media\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "RvMedia": "Modules\\Media\\Facades\\RvMediaFacade",
+                "MetaBox": "Modules\\Base\\Facades\\MetaBoxFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Media\\": ""
+        }
+    }
+}

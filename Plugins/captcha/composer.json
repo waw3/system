@@ -1,0 +1,15 @@
+{
+  "name": "krackenlabs/captcha",
+  "description": "Captcha plugin",
+  "homepage": "https://botble.com",
+  "authors": [
+    {
+      "name": "William Whitmire",
+      "email": "krackenlabs@gmail.com",
+      "homepage": "https://krackenlabs.com"
+    }
+  ],
+  "require": {
+    "google/recaptcha": "^1.1"
+  }
+}

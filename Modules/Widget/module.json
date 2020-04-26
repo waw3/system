@@ -1,0 +1,20 @@
+{
+    "name": "Widget",
+    "alias": "widget",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Widget\\Providers\\WidgetServiceProvider",
+        "Modules\\Widget\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "Widget": "Modules\\Widget\\Facades\\WidgetFacade",
+        "WidgetGroup": "Modules\\Widget\\Facades\\WidgetGroupFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

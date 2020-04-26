@@ -1,0 +1,9 @@
+{
+    "name": "Analytics",
+    "namespace": "Modules\\Plugins\\Analytics\\",
+    "provider": "Modules\\Plugins\\Analytics\\Providers\\AnalyticsServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Tracking data from Google Analytics"
+}

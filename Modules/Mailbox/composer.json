@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/mailbox",
+    "description": "Receive and send emails from your project with Laravel",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Mailbox\\Providers\\MailboxServiceProvider",
+                "Modules\\Mailbox\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Inbox": "Xoshbin\\Inbox\\Facades\\Inbox"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Mailbox\\": ""
+        }
+    }
+}

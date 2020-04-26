@@ -1,0 +1,19 @@
+{
+    "name": "Acl",
+    "alias": "acl",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 3,
+    "providers": [
+        "Modules\\Acl\\Providers\\AclServiceProvider",
+        "Modules\\Acl\\Providers\\RouteServiceProvider",
+        "Modules\\Acl\\Providers\\EventServiceProvider",
+        "Modules\\Acl\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Backup",
+    "namespace": "Modules\\Plugins\\Backup\\",
+    "provider": "Modules\\Plugins\\Backup\\Providers\\BackupServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "5.2",
+    "description": "Backup & restore database, uploads folder"
+}

@@ -1,0 +1,137 @@
+<?php
+
+namespace Modules\Plugins\AuditLog\Providers;
+
+use Assets;
+use AuditLog;
+use Illuminate\Support\Facades\Auth;
+use Modules\Dashboard\Supports\DashboardWidgetInstance;
+use Illuminate\Support\Collection;
+use Illuminate\Support\ServiceProvider;
+use Modules\Plugins\AuditLog\Events\AuditHandlerEvent;
+use Illuminate\Http\Request;
+use stdClass;
+use Throwable;
+
+class HookServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        add_action('action_after_logout_system', [$this, 'handleLogout'], 45, 2);
+
+        add_action('action_after_update_password', [$this, 'handleUpdatePassword'], 45, 3);
+        add_action('action_after_update_password', [$this, 'handleUpdateProfile'], 45, 3);
+
+        if (defined('BACKUP_ACTION_AFTER_BACKUP')) {
+            add_action(BACKUP_ACTION_AFTER_BACKUP, [$this, 'handleBackup'], 45, 1);
+            add_action(BACKUP_ACTION_AFTER_RESTORE, [$this, 'handleRestore'], 45, 1);
+        }
+
+        add_filter('admin_dashboard_list', [$this, 'registerDashboardWidgets'], 28, 2);
+    }
+
+    /**
+     * @param Request $request
+     * @param stdClass $data
+     */
+    public function handleLogin(Request $request, $data)
+    {
+        event(new AuditHandlerEvent(
+            'to the system',
+            'logged in',
+            $data->id,
+            $data->getFullName(),
+            'info'
+        ));
+    }
+
+    /**
+     * @param string $screen
+     * @param Request $request
+     * @param stdClass $data
+     */
+    public function handleLogout(Request $request, $data)
+    {
+        event(new AuditHandlerEvent(
+            'of the system',
+            'logged out',
+            $data->id,
+            $data->getFullName(),
+            'info'
+        ));
+    }
+
+    /**
+     * @param string $screen
+     * @param Request $request
+     * @param stdClass $data
+     */
+    public function handleUpdateProfile($screen, Request $request, $data)
+    {
+        event(new AuditHandlerEvent(
+            $screen,
+            'updated profile',
+            $data->id,
+            AuditLog::getReferenceName($screen, $data),
+            'info'
+        ));
+    }
+
+    /**
+     * @param string $screen
+     * @param Request $request
+     * @param stdClass $data
+     */
+    public function handleUpdatePassword($screen, Request $request, $data)
+    {
+        event(new AuditHandlerEvent(
+            $screen,
+            'changed password',
+            $data->id,
+            AuditLog::getReferenceName($screen, $data),
+            'danger'
+        ));
+    }
+
+    /**
+     * @param string $screen
+     */
+    public function handleBackup($screen)
+    {
+        event(new AuditHandlerEvent($screen, 'backup', 0, '', 'info'));
+    }
+
+    /**
+     * @param string $screen
+     */
+    public function handleRestore($screen)
+    {
+        event(new AuditHandlerEvent($screen, 'restored', 0, '', 'info'));
+    }
+
+    /**
+     * @param array $widgets
+     * @param Collection $widgetSettings
+     * @return array
+     * @throws Throwable
+     */
+    public function registerDashboardWidgets($widgets, $widgetSettings)
+    {
+        if (!Auth::user()->hasPermission('audit-log.index')) {
+            return $widgets;
+        }
+
+        Assets::addScriptsDirectly(['/vendor/core/plugins/audit-log/js/audit-log.js']);
+
+        return (new DashboardWidgetInstance)
+            ->setPermission('audit-log.index')
+            ->setKey('widget_audit_logs')
+            ->setTitle(trans('modules.plugins.audit-log::history.widget_audit_logs'))
+            ->setIcon('fas fa-history')
+            ->setColor('#44b6ae')
+            ->setRoute(route('audit-log.widget.activities'))
+            ->setBodyClass('scroll-table')
+            ->setColumn('col-md-6 col-sm-6')
+            ->init($widgets, $widgetSettings);
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Theme",
+    "alias": "theme",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Theme\\Providers\\ThemeServiceProvider",
+        "Modules\\Theme\\Providers\\RouteServiceProvider",
+        "Modules\\Theme\\Providers\\HookServiceProvider",
+        "Modules\\Theme\\Providers\\ThemeManagementServiceProvider"
+    ],
+    "aliases": {
+        "Theme": "Modules\\Theme\\Facades\\ThemeFacade",
+        "ThemeOption": "Modules\\Theme\\Facades\\ThemeOptionFacade",
+        "ThemeManager": "Modules\\Theme\\Facades\\ManagerFacade",
+        "AdminBar": "Modules\\Theme\\Facades\\AdminBarFacade",
+        "SiteMapManager": "Modules\\Theme\\Facades\\SiteMapManagerFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

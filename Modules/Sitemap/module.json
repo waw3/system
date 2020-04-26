@@ -1,0 +1,17 @@
+{
+    "name": "Sitemap",
+    "alias": "sitemap",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Sitemap\\Providers\\SitemapServiceProvider",
+        "Modules\\Sitemap\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

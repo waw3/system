@@ -1,0 +1,20 @@
+{
+    "name": "Media",
+    "alias": "media",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 3,
+    "providers": [
+        "Modules\\Media\\Providers\\MediaServiceProvider",
+        "Modules\\Media\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "RvMedia": "Modules\\Media\\Facades\\RvMediaFacade",
+        "MetaBox": "Modules\\Base\\Facades\\MetaBoxFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

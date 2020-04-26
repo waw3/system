@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/plugingenerator",
+    "description": "",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\PluginGenerator\\Providers\\PluginGeneratorServiceProvider",
+                "Modules\\PluginGenerator\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\PluginGenerator\\": ""
+        }
+    }
+}

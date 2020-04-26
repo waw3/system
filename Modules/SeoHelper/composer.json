@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/seohelper",
+    "description": "SEO helper package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\SeoHelper\\Providers\\SeoHelperServiceProvider",
+                "Modules\\SeoHelper\\Providers\\RouteServiceProvider",
+                "Modules\\SeoHelper\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+                "SeoHelper": "Modules\\SeoHelper\\Facades\\SeoHelperFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SeoHelper\\": ""
+        }
+    }
+}

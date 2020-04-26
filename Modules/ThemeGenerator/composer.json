@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/themegenerator",
+    "description": "",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\ThemeGenerator\\Providers\\ThemeGeneratorServiceProvider",
+                "Modules\\ThemeGenerator\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ThemeGenerator\\": ""
+        }
+    }
+}

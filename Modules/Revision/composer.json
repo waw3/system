@@ -1,0 +1,28 @@
+{
+    "name": "krackenlabs/revision",
+    "description": "Revision package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Revision\\Providers\\RevisionServiceProvider",
+                "Modules\\Revision\\Providers\\RouteServiceProvider",
+                "Modules\\Revision\\Providers\\HookServiceProvider"
+
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Revision\\": ""
+        }
+    }
+}

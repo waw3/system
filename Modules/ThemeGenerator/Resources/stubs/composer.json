@@ -1,0 +1,19 @@
+{
+  "name": "krackenlabs/{theme}",
+  "type": "krackenlabs-theme",
+  "description": "Example theme for CMS",
+  "homepage": "http://krackenlabs.com",
+  "authors": [
+    {
+      "name": "KrackenLabs",
+      "homepage": "http://krackenlabs.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Theme\\{Theme}\\": "src/"
+    }
+  }
+}

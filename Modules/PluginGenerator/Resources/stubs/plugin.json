@@ -1,0 +1,9 @@
+{
+    "name": "{Module}",
+    "namespace": "Modules\\Plugins\\{Module}\\",
+    "provider": "Modules\\Plugins\\{Module}\\Providers\\{Module}ServiceProvider",
+    "author": "William Whitmire",
+    "url": "https://krackenlabs.com",
+    "version": "1.0",
+    "description": "The description for module {module}"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "krackenlabs/slug",
+    "description": "Slug/Permalink for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Slug\\Providers\\SlugServiceProvider",
+                "Modules\\Slug\\Providers\\RouteServiceProvider",
+                "Modules\\Slug\\Providers\\FormServiceProvider",
+                "Modules\\Slug\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+                "SlugHelper": "Modules\\Slug\\Facades\\SlugHelperFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Slug\\": ""
+        }
+    }
+}

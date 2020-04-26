@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/optimize",
+    "description": "Optimize page speed package for CMS application",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Optimize\\Providers\\OptimizeServiceProvider",
+                "Modules\\Optimize\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Optimize\\": ""
+        }
+    }
+}
