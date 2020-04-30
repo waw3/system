@@ -7,15 +7,18 @@
             "email": "krackenlabs@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=7.2.0"
+    },
     "extra": {
         "laravel": {
             "providers": [
+                "Maatwebsite\\Sidebar\\SidebarServiceProvider",
+                "Modules\\Dashboard\\Providers\\RouteServiceProvider",
                 "Modules\\Dashboard\\Providers\\DashboardServiceProvider",
-                "Modules\\Dashboard\\Providers\\RouteServiceProvider"
+                "Modules\\Dashboard\\Providers\\SidebarServiceProvider"
             ],
-            "aliases": {
-                "DashboardMenu": "Modules\\Dashboard\\Facades\\DashboardMenuFacade"
-            }
+            "aliases": {}
         }
     },
     "autoload": {

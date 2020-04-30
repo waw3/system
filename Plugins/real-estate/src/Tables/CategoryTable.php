@@ -94,7 +94,7 @@ class CategoryTable extends TableAbstract
             're_categories.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -136,7 +136,7 @@ class CategoryTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('category.create'), 'category.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Category::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Category::class);
     }
 
     /**

@@ -107,7 +107,7 @@ class UserController extends BaseController
     {
         $user = $service->execute($request);
 
-        event(new CreatedContentEvent(USER_MODULE_SCREEN_NAME, $request, $user));
+        event(new CreatedContentEvent('user', $request, $user));
 
         return $response
             ->setPreviousUrl(route('users.index'))
@@ -269,7 +269,7 @@ class UserController extends BaseController
 
         $user->fill($request->input());
         $this->userRepository->createOrUpdate($user);
-        do_action(USER_ACTION_AFTER_UPDATE_PROFILE, USER_MODULE_SCREEN_NAME, $request, $user);
+        do_action('action_after_update_profile', USER_MODULE_SCREEN_NAME, $request, $user);
 
         return $response->setMessage(trans('modules.acl::users.update_profile_success'));
     }

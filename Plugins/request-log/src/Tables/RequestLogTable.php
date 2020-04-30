@@ -89,7 +89,7 @@ class RequestLogTable extends TableAbstract
                 'request_logs.count',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -133,7 +133,7 @@ class RequestLogTable extends TableAbstract
             ],
         ];
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, RequestLog::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, RequestLog::class);
     }
 
     /**

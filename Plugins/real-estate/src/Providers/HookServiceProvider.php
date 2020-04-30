@@ -15,9 +15,9 @@ class HookServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        add_filter(BASE_FILTER_TOP_HEADER_LAYOUT, [$this, 'registerTopHeaderNotification'], 130);
-        add_filter(BASE_FILTER_APPEND_MENU_NAME, [$this, 'getUnReadCount'], 130, 2);
-        add_filter(BASE_FILTER_AFTER_SETTING_EMAIL_CONTENT, [$this, 'addConsultSetting'], 990, 1);
+        add_filter('base_filter_top_header_layout', [$this, 'registerTopHeaderNotification'], 130);
+        add_filter('base_filter_append_menu_name', [$this, 'getUnReadCount'], 130, 2);
+        add_filter('base-filter-after-setting-email-content', [$this, 'addConsultSetting'], 990, 1);
     }
 
     /**

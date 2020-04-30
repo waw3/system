@@ -81,7 +81,7 @@ class AuditLogTable extends TableAbstract
             ->with(['user'])
             ->select('audit_histories.*');
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -122,7 +122,7 @@ class AuditLogTable extends TableAbstract
             ],
         ];
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, AuditHistory::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, AuditHistory::class);
     }
 
     /**

@@ -33,9 +33,8 @@ class EmailHandler
     public function send(string $content, string $title, $to = null, $args = [], $debug = false)
     {
         try {
-            if (empty($to)) {
-                $to = setting('admin_email', setting('email_from_address', config('mail.from.address')));
-            }
+
+            $to = empty($to) ? setting('admin_email', setting('email_from_address', config('mail.from.address'))) : $to;
 
             $content = MailVariable::prepareData($content);
             $title = MailVariable::prepareData($title);
@@ -66,16 +65,13 @@ class EmailHandler
     {
         try {
             $ex = FlattenException::create($exception);
-
             $url = URL::full();
             $error = $this->renderException($exception);
 
             $this->send(
                 view('modules.base::emails.error-reporting', compact('url', 'ex', 'error'))->render(),
                 $exception->getFile(),
-                !empty(mconfig('base.config.error_reporting.to')) ?
-                    mconfig('base.config.error_reporting.to') :
-                    setting('admin_email')
+                !empty(mconfig('base.config.error_reporting.to')) ? mconfig('base.config.error_reporting.to') : setting('admin_email')
             );
         } catch (Exception $ex) {
             info($ex->getMessage());
@@ -89,7 +85,6 @@ class EmailHandler
     protected function renderException($exception)
     {
         $renderer = new HtmlErrorRenderer(true);
-
         $exception = $renderer->render($exception);
 
         if (!headers_sent()) {

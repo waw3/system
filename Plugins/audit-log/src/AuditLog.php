@@ -36,8 +36,8 @@ class AuditLog
     {
         $name = '';
         switch ($screen) {
-            case USER_MODULE_SCREEN_NAME:
-            case AUTH_MODULE_SCREEN_NAME:
+            case 'user':
+            case 'auth':
                 $name = $data->getFullName();
                 break;
             default:

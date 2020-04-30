@@ -13,9 +13,9 @@ class HookServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        add_filter(BASE_FILTER_TOP_HEADER_LAYOUT, [$this, 'registerTopHeaderNotification'], 120);
-        add_filter(BASE_FILTER_APPEND_MENU_NAME, [$this, 'getUnReadCount'], 120, 2);
-        add_filter(BASE_FILTER_AFTER_SETTING_EMAIL_CONTENT, [$this, 'addContactSetting'], 99, 1);
+        add_filter('base_filter_top_header_layout', [$this, 'registerTopHeaderNotification'], 120);
+        add_filter('base_filter_append_menu_name', [$this, 'getUnReadCount'], 120, 2);
+        add_filter('base-filter-after-setting-email-content', [$this, 'addContactSetting'], 99, 1);
 
         if (function_exists('add_shortcode')) {
             add_shortcode('contact-form', __('Contact form'), __('Add contact form'), [$this, 'form']);

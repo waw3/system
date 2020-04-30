@@ -91,7 +91,7 @@ class PackageTable extends TableAbstract
             'packages.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -133,7 +133,7 @@ class PackageTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('package.create'), 'package.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Package::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Package::class);
     }
 
     /**

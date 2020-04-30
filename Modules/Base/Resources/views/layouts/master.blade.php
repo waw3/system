@@ -14,6 +14,7 @@
                         <div class="sidebar-content">
                             <ul class="page-sidebar-menu page-header-fixed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                                 @include('modules.base::layouts.partials.sidebar')
+                               {{-- @include('modules.dashboard::partials.sidebar')--}}
                             </ul>
                         </div>
                     </div>

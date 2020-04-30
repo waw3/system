@@ -79,7 +79,7 @@ class FeatureTable extends TableAbstract
             're_features.name',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -112,7 +112,7 @@ class FeatureTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('property_feature.create'), 'property_feature.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Feature::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Feature::class);
     }
 
     /**

@@ -6,12 +6,12 @@
     "active": 1,
     "order": 3,
     "providers": [
+        "Maatwebsite\\Sidebar\\SidebarServiceProvider",
+        "Modules\\Dashboard\\Providers\\RouteServiceProvider",
         "Modules\\Dashboard\\Providers\\DashboardServiceProvider",
-        "Modules\\Dashboard\\Providers\\RouteServiceProvider"
+        "Modules\\Dashboard\\Providers\\SidebarServiceProvider"
     ],
-    "aliases": {
-        "DashboardMenu": "Modules\\Dashboard\\Facades\\DashboardMenuFacade"
-    },
+    "aliases": {},
     "files": [
         "functions.php"
     ],

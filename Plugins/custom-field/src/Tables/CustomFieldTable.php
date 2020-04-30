@@ -119,7 +119,7 @@ class CustomFieldTable extends TableAbstract
                 'field_groups.created_at',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -167,7 +167,7 @@ class CustomFieldTable extends TableAbstract
             'link' => '#',
             'text' => view('modules.plugins.custom-field::_partials.import')->render(),
         ];
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, FieldGroup::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, FieldGroup::class);
     }
 
     /**

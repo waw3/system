@@ -13,7 +13,7 @@ class HookServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        add_action(BASE_ACTION_META_BOXES, [$this, 'addPublishBox'], 40, 2);
+        add_action('meta_boxes', [$this, 'addPublishBox'], 40, 2);
 
         add_action(BASE_ACTION_AFTER_CREATE_CONTENT, [$this, 'saveSchedulerData'], 127, 3);
         add_action(BASE_ACTION_AFTER_UPDATE_CONTENT, [$this, 'saveSchedulerData'], 127, 3);

@@ -18,6 +18,7 @@ use Modules\Base\Supports\Helper;
 use Modules\Setting\Providers\SettingServiceProvider;
 use Modules\Setting\Supports\SettingStore;
 use Modules\Support\Traits\ModuleServiceProvider;
+use Modules\Base\Traits\CanGetSidebarClassForModule;
 
 /**
  * BaseServiceProvider class.
@@ -26,7 +27,7 @@ use Modules\Support\Traits\ModuleServiceProvider;
  */
 class BaseServiceProvider extends ServiceProvider
 {
-    use ModuleServiceProvider;
+    use ModuleServiceProvider, CanGetSidebarClassForModule;
 
 	/**
      * @var string $moduleName
@@ -107,6 +108,8 @@ class BaseServiceProvider extends ServiceProvider
         BeforeEditContentEvent::class   => [BeforeEditContentListener::class]
     ];
 
+
+
     /**
      * Class event subscribers.
      *
@@ -169,8 +172,8 @@ class BaseServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->booted(function () {
-            do_action(BASE_ACTION_INIT);
-            add_action(BASE_ACTION_META_BOXES, [MetaBox::class, 'doMetaBoxes'], 8, 2);
+            do_action('init');
+            add_action('meta_boxes', [MetaBox::class, 'doMetaBoxes'], 8, 2);
 
             config([
                 'app.locale' => mconfig('base.config.locale', config('app.locale')),
@@ -233,6 +236,14 @@ class BaseServiceProvider extends ServiceProvider
         Event::listen(['cache:cleared'], function () {
             File::delete([storage_path('cache_keys.json'), storage_path('settings.json')]);
         });
+
+
+/*
+        $this->app['events']->listen(
+            \Modules\Base\Events\BuildingSidebar::class,
+            $this->getSidebarClassForModule('core', \Modules\Core\Events\Handlers\RegisterCoreSidebar::class)
+        );
+*/
 
 
     }

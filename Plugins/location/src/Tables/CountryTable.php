@@ -95,7 +95,7 @@ class CountryTable extends TableAbstract
             'countries.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -142,7 +142,7 @@ class CountryTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('country.create'), 'country.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Country::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Country::class);
     }
 
     /**

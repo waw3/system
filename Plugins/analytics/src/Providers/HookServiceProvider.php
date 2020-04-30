@@ -22,7 +22,7 @@ class HookServiceProvider extends ServiceProvider
             add_filter('admin_dashboard_list', [$this, 'addPageWidget'], 19, 2);
             add_filter('admin_dashboard_list', [$this, 'addBrowserWidget'], 20, 2);
             add_filter('admin_dashboard_list', [$this, 'addReferrerWidget'], 22, 2);
-            add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addAnalyticsSetting'], 99, 1);
+            add_filter('base-filter-after-setting-content', [$this, 'addAnalyticsSetting'], 99, 1);
         }
     }
 

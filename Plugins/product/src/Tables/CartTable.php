@@ -96,7 +96,7 @@ class CartTable extends TableAbstract
             'carts.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -140,7 +140,7 @@ class CartTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('cart.create'), 'cart.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Cart::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Cart::class);
     }
 
     /**

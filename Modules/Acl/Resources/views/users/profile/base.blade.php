@@ -97,7 +97,7 @@
                                 <a href="#tab_1_3" class="nav-link" data-toggle="tab" aria-expanded="false">{{ trans('modules.acl::users.change_password') }}</a>
                             </li>
                         @endif
-                        {!! apply_filters(ACL_FILTER_PROFILE_FORM_TABS, null) !!}
+                        {!! apply_filters('acl_filter_profile_tabs', null) !!}
                     </ul>
                     <div class="tab-content">
                     <!-- PERSONAL INFO TAB -->
@@ -112,7 +112,7 @@
                         </div>
                     @endif
                     <!-- END CHANGE PASSWORD TAB -->
-                    {!! apply_filters(ACL_FILTER_PROFILE_FORM_TAB_CONTENTS, null) !!}
+                    {!! apply_filters('acl_filter_profile_tab_contents', null) !!}
                 </div>
                 </div>
             </div>

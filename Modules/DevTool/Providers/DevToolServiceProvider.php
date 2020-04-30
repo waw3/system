@@ -78,7 +78,8 @@ class DevToolServiceProvider extends ServiceProvider
 
         \Modules\DevTool\Console\Commands\GitCommitChecker\InstallHooks::class => 'command.git:install-hooks',
         \Modules\DevTool\Console\Commands\GitCommitChecker\PreCommitHook::class => 'command.git:create-phpcs',
-        \Modules\DevTool\Console\Commands\GitCommitChecker\InstallPhpcs::class => 'command.git:pre-commit-hook'
+        \Modules\DevTool\Console\Commands\GitCommitChecker\InstallPhpcs::class => 'command.git:pre-commit-hook',
+        \Modules\DevTool\Console\Commands\SeedGenCommand::class => 'command.cms:db:seed:create'
     ];
 
     /**
@@ -137,7 +138,9 @@ class DevToolServiceProvider extends ServiceProvider
      */
     private function registerBinders()
     {
-
+        $this->app->singleton('seedgen', function($app) {
+            return new \Modules\DevTool\Services\Seed;
+        });
     }
 
 

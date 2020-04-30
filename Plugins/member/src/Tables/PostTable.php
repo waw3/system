@@ -81,7 +81,7 @@ class PostTable extends \Modules\Plugins\Blog\Tables\PostTable
                 'posts.author_type' => Member::class,
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -91,7 +91,7 @@ class PostTable extends \Modules\Plugins\Blog\Tables\PostTable
     {
         $buttons = $this->addCreateButton(route('public.member.posts.create'), null);
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Post::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Post::class);
     }
 
     /**

@@ -27,7 +27,7 @@
                             </li>
                         @endif
                         @if (Auth::check())
-                            {!! apply_filters(BASE_FILTER_TOP_HEADER_LAYOUT, null) !!}
+                            {!! apply_filters('base_filter_top_header_layout', null) !!}
                         @endif
 
                         @if (isset($themes) && setting('enable_change_admin_theme') != false)

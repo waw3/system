@@ -12,11 +12,10 @@ class HookServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        add_action(BASE_ACTION_META_BOXES, [$this, 'addGalleryBox'], 13, 2);
+        add_action('meta_boxes', [$this, 'addGalleryBox'], 13, 2);
 
         if (function_exists('shortcode')) {
-            add_shortcode('gallery', trans('modules.plugins.gallery::gallery.gallery_images'),
-                trans('modules.plugins.gallery::gallery.add_gallery_short_code'), [$this, 'render']);
+            add_shortcode('gallery', trans('modules.plugins.gallery::gallery.gallery_images'), trans('modules.plugins.gallery::gallery.add_gallery_short_code'), [$this, 'render']);
             shortcode()->setAdminConfig('gallery', view('modules.plugins.gallery::partials.short-code-admin-config')->render());
         }
     }
@@ -28,9 +27,7 @@ class HookServiceProvider extends ServiceProvider
     public function addGalleryBox($context, $object)
     {
         if ($object && in_array(get_class($object), config('modules.plugins.gallery.general.supported', [])) && $context == 'advanced') {
-            Assets::addStylesDirectly(['vendor/core/plugins/gallery/css/admin-gallery.css'])
-                ->addScripts(['sortable']);
-
+            Assets::addStylesDirectly(['vendor/core/plugins/gallery/css/admin-gallery.css'])->addScripts(['sortable']);
             add_meta_box('gallery_wrap', trans('modules.plugins.gallery::gallery.gallery_box'), [$this, 'galleryMetaField'], get_class($object), $context, 'default');
         }
     }

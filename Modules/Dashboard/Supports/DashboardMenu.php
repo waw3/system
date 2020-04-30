@@ -2,25 +2,33 @@
 
 namespace Modules\Dashboard\Supports;
 
-use Exception;
+use Exception, RuntimeException, URL;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Psr\SimpleCache\InvalidArgumentException;
-use RuntimeException;
-use URL;
 
+/**
+ * DashboardMenu class.
+ */
 class DashboardMenu
 {
+
     /**
      * Get all registered links from package
+     *
+     * (default value: [])
+     *
      * @var array
+     * @access protected
      */
     protected $links = [];
 
     /**
-     * Add link
+     * registerItem function. Add link
+     *
+     * @access public
      * @param array $options
      * @return $this
      */
@@ -56,7 +64,6 @@ class DashboardMenu
         }
 
         if (isset($this->links[$id])) {
-
             $options['children'] = array_merge($options['children'], $this->links[$id]['children']);
             $options['permissions'] = array_merge($options['permissions'], $this->links[$id]['permissions']);
 
@@ -82,7 +89,11 @@ class DashboardMenu
     }
 
     /**
+     * removeItem function.
+     *
+     * @access public
      * @param array|string $id
+     * @param mixed $parentId (default: null)
      * @return $this
      */
     public function removeItem($id, $parentId = null): self

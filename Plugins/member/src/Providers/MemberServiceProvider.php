@@ -90,7 +90,7 @@ class MemberServiceProvider extends ServiceProvider
 
         add_filter(IS_IN_ADMIN_FILTER, [$this, 'setInAdmin'], 20, 0);
 
-        add_action(BASE_ACTION_META_BOXES, function () {
+        add_action('meta_boxes', function () {
             if (request()->segment(1) == 'account') {
                 MetaBox::removeMetaBox('gallery_wrap', 'Modules\Plugins\Blog\Models\Post', 'advanced');
             }

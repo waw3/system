@@ -9,7 +9,7 @@
                     <p>{{ trans('modules.plugins.payment::payment.payment_methods_description') }}</p>
                 </div>
                 <div class="col-md-9">
-                    @php do_action(BASE_ACTION_META_BOXES, 'top', new \Modules\Plugins\Payment\Models\Payment) @endphp
+                    @php do_action('meta_boxes', 'top', new \Modules\Plugins\Payment\Models\Payment) @endphp
                     @php $paypalStatus = setting('payment_paypal_status'); @endphp
                     <table class="table payment-method-item">
                         <tbody>
@@ -301,13 +301,13 @@
                     </table>
                 </div>
             </div>
-            @php do_action(BASE_ACTION_META_BOXES, 'main', new \Modules\Plugins\Payment\Models\Payment) @endphp
+            @php do_action('meta_boxes', 'main', new \Modules\Plugins\Payment\Models\Payment) @endphp
             <div class="group">
                 <div class="col-md-3">
 
                 </div>
                 <div class="col-md-9">
-                    @php do_action(BASE_ACTION_META_BOXES, 'advanced', new \Modules\Plugins\Payment\Models\Payment) @endphp
+                    @php do_action('meta_boxes', 'advanced', new \Modules\Plugins\Payment\Models\Payment) @endphp
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ class HookServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        add_action(BASE_ACTION_META_BOXES, [$this, 'handle'], 125, 2);
+        add_action('meta_boxes', [$this, 'handle'], 125, 2);
     }
 
     /**

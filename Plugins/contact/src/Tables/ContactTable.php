@@ -98,7 +98,7 @@ class ContactTable extends TableAbstract
                 'contacts.status',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -148,7 +148,7 @@ class ContactTable extends TableAbstract
      */
     public function buttons()
     {
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, [], Contact::class);
+        return apply_filters('base_filter_datatables_buttons', [], Contact::class);
     }
 
     /**

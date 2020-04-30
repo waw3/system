@@ -42,7 +42,7 @@ class ChangePasswordService implements ProduceServiceInterface
             'password' => Hash::make($request->input('password')),
         ]);
 
-        do_action('action_after_update_password', USER_MODULE_SCREEN_NAME, $request, $user);
+        do_action('action_after_update_password', 'user', $request, $user);
 
         return $user;
     }

@@ -12,7 +12,7 @@ class HookServiceProvider extends ServiceProvider
             add_filter('admin_dashboard_notifications', [$this, 'registerAdminAlert'], 5, 1);
         }
 
-        add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addBackupSetting'], 199, 1);
+        add_filter('base-filter-after-setting-content', [$this, 'addBackupSetting'], 199, 1);
     }
 
     /**

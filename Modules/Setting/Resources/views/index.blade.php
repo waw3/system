@@ -194,7 +194,7 @@
                 </div>
             </div>
 
-            {!! apply_filters(BASE_FILTER_AFTER_SETTING_CONTENT, null) !!}
+            {!! apply_filters('base-filter-after-setting-content', null) !!}
 
             <div class="flexbox-annotated-section" style="border: none">
                 <div class="flexbox-annotated-section-annotation">

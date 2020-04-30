@@ -91,7 +91,7 @@ class ShippingTable extends TableAbstract
             'shippings.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -133,7 +133,7 @@ class ShippingTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('shipping.create'), 'shipping.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Shipping::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Shipping::class);
     }
 
     /**

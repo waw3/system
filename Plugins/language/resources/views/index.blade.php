@@ -14,7 +14,7 @@
             <div class="tab-pane active" id="tab_detail">
                 <div class="row">
                     <div class="col-md-5">
-                        @php do_action(BASE_ACTION_META_BOXES, 'top', new \Modules\Plugins\Language\Models\Language) @endphp
+                        @php do_action('meta_boxes', 'top', new \Modules\Plugins\Language\Models\Language) @endphp
                         <div class="main-form">
                             <div class="form-wrap">
                                 <div class="form-group">
@@ -78,7 +78,7 @@
                                 </p>
                             </div>
                         </div>
-                        @php do_action(BASE_ACTION_META_BOXES, 'advanced', new \Modules\Plugins\Language\Models\Language) @endphp
+                        @php do_action('meta_boxes', 'advanced', new \Modules\Plugins\Language\Models\Language) @endphp
                     </div>
                     <div class="col-md-7">
                         <div class="table-responsive">

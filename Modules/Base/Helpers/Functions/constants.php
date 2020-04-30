@@ -82,21 +82,29 @@ if (!defined('BASE_FILTER_TOP_HEADER_LAYOUT')) {
     define('BASE_FILTER_TOP_HEADER_LAYOUT', 'base_filter_top_header_layout');
 }
 
+/*
 if (!defined('BASE_FILTER_TABLE_BUTTONS')) {
     define('BASE_FILTER_TABLE_BUTTONS', 'base_filter_datatables_buttons');
 }
+*/
 
+/*
 if (!defined('BASE_FILTER_TABLE_QUERY')) {
     define('BASE_FILTER_TABLE_QUERY', 'base_filter_datatables_query');
 }
+*/
 
+/*
 if (!defined('BASE_ACTION_ENQUEUE_SCRIPTS')) {
     define('BASE_ACTION_ENQUEUE_SCRIPTS', 'base_action_enqueue_scripts');
 }
+*/
 
+/*
 if (!defined('BASE_FILTER_APPEND_MENU_NAME')) {
     define('BASE_FILTER_APPEND_MENU_NAME', 'base_filter_append_menu_name');
 }
+*/
 
 if (!defined('BASE_ACTION_PUBLIC_RENDER_SINGLE')) {
     define('BASE_ACTION_PUBLIC_RENDER_SINGLE', 'base_action_public_render_single');
@@ -150,9 +158,11 @@ if (!defined('BASE_FILTER_FORM_EDITOR_BUTTONS')) {
     define('BASE_FILTER_FORM_EDITOR_BUTTONS', 'base_filter_form_editor_buttons');
 }
 
+/*
 if (!defined('BASE_ACTION_INIT')) {
     define('BASE_ACTION_INIT', 'init');
 }
+*/
 
 if (!defined('IS_IN_ADMIN_FILTER')) {
     define('IS_IN_ADMIN_FILTER', 'is_in_admin');

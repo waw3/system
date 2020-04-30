@@ -10,7 +10,7 @@ class HookServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        add_action(BASE_ACTION_META_BOXES, [$this, 'addMetaBox'], 12, 2);
+        add_action('meta_boxes', [$this, 'addMetaBox'], 12, 2);
         add_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, [$this, 'setSeoMeta'], 56, 2);
     }
 

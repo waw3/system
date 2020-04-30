@@ -1,5 +1,6 @@
 <?php namespace Modules\Dashboard\Providers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Routing\Events\RouteMatched;
@@ -42,7 +43,7 @@ class DashboardServiceProvider extends ServiceProvider
      * @access protected
      */
     protected $aliases = [
-        //
+        'DashboardMenu' => Modules\Dashboard\Facades\DashboardMenu::class
     ];
 
     /**
@@ -169,6 +170,8 @@ class DashboardServiceProvider extends ServiceProvider
         $this->registerModule();
 
 
+
+
     }
 
 
@@ -180,6 +183,16 @@ class DashboardServiceProvider extends ServiceProvider
      */
     private function registerBinders()
     {
+        $this->app->singleton('isInstalled', function () {
+            return $this->isInstalled();
+        });
+
+        $this->app->singleton('onBackend', function () {
+            return $this->onBackend();
+        });
+
+        $this->app->bind('dashboardmenu', \Modules\Dashboard\Supports\DashboardMenu::class);
+
         $this->app->bind(DashboardWidgetInterface::class, function () {
             return new DashboardWidgetCacheDecorator(
                 new DashboardWidgetRepository(new DashboardWidget)
@@ -191,6 +204,26 @@ class DashboardServiceProvider extends ServiceProvider
                 new DashboardWidgetSettingRepository(new DashboardWidgetSetting)
             );
         });
+    }
+
+
+    private function isInstalled()
+    {
+        return true === mconfig('base.config.installed');
+    }
+
+     /**
+     * Checks if the current url matches the configured backend uri
+     * @return bool
+     */
+    private function onBackend()
+    {
+        $url = app(Request::class)->path();
+        if (str_contains($url, mconfig('base.config.admin_dir'))) {
+            return true;
+        }
+
+        return false;
     }
 
 

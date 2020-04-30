@@ -29,9 +29,7 @@ class Assets extends BaseAssets
         parent::__construct($config, $htmlBuilder);
 
         $this->config = $config->get('modules.base.assets');
-
         $this->scripts = $this->config['scripts'];
-
         $this->styles = $this->config['styles'];
     }
 
@@ -103,7 +101,7 @@ class Assets extends BaseAssets
      */
     public function renderHeader($lastStyles = [])
     {
-        do_action(BASE_ACTION_ENQUEUE_SCRIPTS);
+        do_action('base_action_enqueue_scripts');
 
         return parent::renderHeader($lastStyles);
     }

@@ -1,0 +1,20 @@
+{
+    "name": "oscarafdev/laravel-4-generators",
+    "description": "Rapidly generate resources, migrations, models, and much more.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oscar Fernandez",
+            "email": "oscarafdev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0 || ^7.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Way\\Generators": "src/"
+        }
+    }
+}

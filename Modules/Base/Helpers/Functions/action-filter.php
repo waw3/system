@@ -25,6 +25,20 @@ if (!function_exists('remove_filter')) {
     }
 }
 
+if (!function_exists('apply_filters')) {
+    /**
+     * apply_filters function.
+     *
+     * @access public
+     * @return mixed
+     */
+    function apply_filters()
+    {
+        $args = func_get_args();
+        return Filter::fire(array_shift($args), $args);
+    }
+}
+
 if (!function_exists('add_action')) {
     /**
      * @param string $hook
@@ -38,24 +52,22 @@ if (!function_exists('add_action')) {
     }
 }
 
-if (!function_exists('apply_filters')) {
-    /**
-     * @return mixed
-     */
-    function apply_filters()
-    {
-        $args = func_get_args();
-        return Filter::fire(array_shift($args), $args);
-    }
-}
-
 if (!function_exists('do_action')) {
+
+    /**
+     * do_action function.
+     *
+     * @access public
+     * @return void
+     */
     function do_action()
     {
         $args = func_get_args();
         Action::fire(array_shift($args), $args);
     }
 }
+
+
 
 if (!function_exists('get_hooks')) {
     /**

@@ -33,7 +33,8 @@
         "tightenco/ziggy": "^0.9",
         "yajra/laravel-datatables-buttons": "^4.9",
         "yajra/laravel-datatables-oracle": "^9.9",
-        "lab404/laravel-impersonate": "^1.6"
+        "lab404/laravel-impersonate": "^1.6",
+        "maatwebsite/laravel-sidebar": "^2.3"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

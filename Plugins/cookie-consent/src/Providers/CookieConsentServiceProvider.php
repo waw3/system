@@ -37,7 +37,7 @@ class CookieConsentServiceProvider extends ServiceProvider
             add_filter(THEME_FRONT_FOOTER, [$this, 'registerCookieConsent'], 1346);
         }
 
-        add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addSettings'], 37, 1);
+        add_filter('base-filter-after-setting-content', [$this, 'addSettings'], 37, 1);
 
         theme_option()
             ->setSection([

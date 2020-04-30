@@ -30,7 +30,7 @@
                     {!! $detail !!}
                 </div>
             </div>
-            @php do_action(BASE_ACTION_META_BOXES, 'advanced', $payment) @endphp
+            @php do_action('meta_boxes', 'advanced', $payment) @endphp
         </div>
         <div class="col-md-3 right-sidebar">
             <div class="widget meta-boxes form-actions form-actions-default action-horizontal">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            @php do_action(BASE_ACTION_META_BOXES, 'side', $payment) @endphp
+            @php do_action('meta_boxes', 'side', $payment) @endphp
         </div>
     </div>
 @stop

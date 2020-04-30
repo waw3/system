@@ -91,7 +91,7 @@ class MemberTable extends TableAbstract
                 'members.email',
                 'members.created_at',
             ]);
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -135,7 +135,7 @@ class MemberTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('member.create'), 'member.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Member::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Member::class);
     }
 
     /**

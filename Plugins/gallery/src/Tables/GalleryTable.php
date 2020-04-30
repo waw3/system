@@ -102,7 +102,7 @@ class GalleryTable extends TableAbstract
                 'galleries.image',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -156,7 +156,7 @@ class GalleryTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('galleries.create'), 'galleries.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Gallery::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Gallery::class);
     }
 
     /**

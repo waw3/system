@@ -76,6 +76,26 @@ trait ModuleServiceProvider
             foreach(File::glob($dir . '/{**/*,*}.php', GLOB_BRACE) as $filename) include_once($filename);
     }
 
+
+    /**
+     * Register the filters.
+     *
+     * @param  Router $router
+     * @return void
+     */
+/*
+    public function registerMiddleware(Router $router)
+    {
+        foreach ($this->middleware as $module => $middlewares) {
+            foreach ($middlewares as $name => $middleware) {
+                $class = "Modules\\{$module}\\Http\\Middleware\\{$middleware}";
+
+                $router->aliasMiddleware($name, $class);
+            }
+        }
+    }
+*/
+
 	/**
      * Register the route middleware.
      *

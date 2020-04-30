@@ -112,7 +112,7 @@ class StateTable extends TableAbstract
             'states.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -159,7 +159,7 @@ class StateTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('state.create'), 'state.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, State::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, State::class);
     }
 
     /**

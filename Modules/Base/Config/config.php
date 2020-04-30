@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'name' => 'Base',
-    'admin_dir'                 => env('ADMIN_DIR', 'admin'),
-    'default-theme'             => env('DEFAULT_THEME', 'default'),
-    'base_name'                 => env('APP_NAME', 'Kracken Technologies'),
-    'logo'                      => '/vendor/core/images/logo_white.png',
-    'favicon'                   => '/vendor/core/images/favicon.png',
-    'editor'                    => [
+    'name'              => 'Base',
+    'admin_dir'         => env('ADMIN_DIR', 'admin'),
+    'default-theme'     => env('DEFAULT_THEME', 'default'),
+    'base_name'         => env('APP_NAME', 'Kracken Technologies'),
+    'logo'              => '/vendor/core/images/logo_white.png',
+    'favicon'           => '/vendor/core/images/favicon.png',
+    'editor'            => [
         'ckeditor' => [
             'js' => [
                 '/vendor/core/libraries/ckeditor/ckeditor.js',
@@ -45,4 +45,25 @@ return [
     'send_mail_using_job_queue' => env('SEND_MAIL_USING_JOB_QUEUE', false),
     'locale'                    => env('APP_LOCALE', 'en'),
     'can_execute_command'       => env('CAN_EXECUTE_COMMAND', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Check if asgard was installed
+    |--------------------------------------------------------------------------
+    */
+    'installed' => env('APP_INSTALLED', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Location where your themes are located
+    |--------------------------------------------------------------------------
+    */
+    'themes_path' => base_path() . '/Themes',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Location where your plugins are located
+    |--------------------------------------------------------------------------
+    */
+    'plugins_path' => base_path() . '/Plugins',
 ];

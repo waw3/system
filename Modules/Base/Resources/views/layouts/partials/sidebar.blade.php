@@ -2,7 +2,7 @@
     <li class="nav-item @if ($menu['active']) active @endif" id="{{ $menu['id'] }}">
         <a href="{{ $menu['url'] }}" class="nav-link nav-toggle">
             <i class="{{ $menu['icon'] }}"></i>
-            <span class="title">{{ trans($menu['name']) }} {!! apply_filters(BASE_FILTER_APPEND_MENU_NAME, null, $menu['id']) !!}</span>
+            <span class="title">{{ trans($menu['name']) }} {!! apply_filters('base_filter_append_menu_name', null, $menu['id']) !!}</span>
             @if (isset($menu['children']) && count($menu['children'])) <span class="arrow @if ($menu['active']) open @endif"></span> @endif
         </a>
         @if (isset($menu['children']) && count($menu['children']))

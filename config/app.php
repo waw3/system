@@ -17,6 +17,8 @@ return [
 
     'php_max_memory_limit' => null,
 
+    'editor' => env('APP_EDITOR', 'vscode'),
+
     /*
     |--------------------------------------------------------------------------
     | Default Date Format

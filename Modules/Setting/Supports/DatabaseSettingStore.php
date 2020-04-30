@@ -230,7 +230,7 @@ class DatabaseSettingStore extends SettingStore
             }
         }
 
-        return apply_filters(SETTINGS_PREPARE_INSERT_DATA, $dbData);
+        return apply_filters('settings_prepare_insert_data', $dbData);
     }
 
     /**

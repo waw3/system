@@ -8,8 +8,8 @@
     @foreach ($fields as $field)
         @if (!in_array($field->getName(), $exclude))
             {!! $field->render() !!}
-            @if ($field->getName() == 'name' && defined('BASE_FILTER_SLUG_AREA'))
-                {!! apply_filters(BASE_FILTER_SLUG_AREA, $form->getModel()) !!}
+            @if ($field->getName() == 'name')
+                {!! apply_filters('slug-area', $form->getModel()) !!}
             @endif
         @endif
     @endforeach
@@ -20,7 +20,7 @@
     {!! $form->getMetaBox($key) !!}
 @endforeach
 
-@php do_action(BASE_ACTION_META_BOXES, 'advanced', $form->getModel()) @endphp
+@php do_action('meta_boxes', 'advanced', $form->getModel()) @endphp
 
 {!! $form->getActionButtons() !!}
 

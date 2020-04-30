@@ -140,7 +140,7 @@ class PostTable extends TableAbstract
                 'posts.author_type',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -203,7 +203,7 @@ class PostTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('posts.create'), 'posts.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Post::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Post::class);
     }
 
     /**

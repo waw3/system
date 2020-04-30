@@ -117,6 +117,10 @@ class Helper
     }
 
     /**
+     * isConnectedDatabase function.
+     *
+     * @access public
+     * @static
      * @return bool
      */
     public static function isConnectedDatabase(): bool

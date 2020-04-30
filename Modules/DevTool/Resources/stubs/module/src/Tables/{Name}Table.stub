@@ -91,7 +91,7 @@ class {Name}Table extends TableAbstract
             '{names}.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -133,7 +133,7 @@ class {Name}Table extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('{-name}.create'), '{-name}.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, {Name}::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, {Name}::class);
     }
 
     /**

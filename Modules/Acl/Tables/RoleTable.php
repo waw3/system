@@ -112,7 +112,7 @@ class RoleTable extends TableAbstract
                 'roles.created_by',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -160,7 +160,7 @@ class RoleTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('roles.create'), 'roles.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Role::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Role::class);
     }
 
     /**

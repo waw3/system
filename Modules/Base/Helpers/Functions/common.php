@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Dashboard\Facades\DashboardMenuFacade;
+use Modules\Dashboard\Facades\DashboardMenu;
 use Modules\Base\Facades\PageTitleFacade;
 use Modules\Base\Supports\Editor;
 use Modules\Base\Supports\PageTitle;
@@ -105,11 +105,11 @@ if (!function_exists('page_title')) {
 
 if (!function_exists('dashboard_menu')) {
     /**
-     * @return \Modules\Base\Supports\DashboardMenu
+     * @return \Modules\Dashboard\Supports\DashboardMenu
      */
     function dashboard_menu()
     {
-        return DashboardMenuFacade::getFacadeRoot();
+        return DashboardMenu::getFacadeRoot();
     }
 }
 

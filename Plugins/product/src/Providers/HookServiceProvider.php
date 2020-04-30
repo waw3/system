@@ -37,7 +37,7 @@ class HookServiceProvider extends ServiceProvider
         add_filter(BASE_FILTER_PUBLIC_SINGLE_DATA, [$this, 'handleSingleView'], 2, 1);
         if (defined('PAGE_MODULE_SCREEN_NAME')) {
             add_filter(PAGE_FILTER_FRONT_PAGE_CONTENT, [$this, 'renderProductPage'], 2, 2);
-            add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addSettings'], 47, 1);
+            add_filter('base-filter-after-setting-content', [$this, 'addSettings'], 47, 1);
             add_filter(PAGE_FILTER_PAGE_NAME_IN_ADMIN_LIST, [$this, 'addAdditionNameToPageName'], 147, 2);
         }
 

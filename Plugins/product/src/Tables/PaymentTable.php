@@ -91,7 +91,7 @@ class PaymentTable extends TableAbstract
             'payments.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -133,7 +133,7 @@ class PaymentTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('payment.create'), 'payment.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Payment::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Payment::class);
     }
 
     /**

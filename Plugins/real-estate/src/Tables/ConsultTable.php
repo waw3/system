@@ -96,7 +96,7 @@ class ConsultTable extends TableAbstract
             'consults.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -145,7 +145,7 @@ class ConsultTable extends TableAbstract
      */
     public function buttons()
     {
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, [], Consult::class);
+        return apply_filters('base_filter_datatables_buttons', [], Consult::class);
     }
 
     /**

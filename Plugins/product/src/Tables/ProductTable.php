@@ -144,7 +144,7 @@ class ProductTable extends TableAbstract
                 'products.author_type',
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -207,7 +207,7 @@ class ProductTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('products.create'), 'products.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Product::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Product::class);
     }
 
     /**

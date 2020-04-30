@@ -80,7 +80,7 @@ class PropertyTable extends \Modules\Plugins\RealEstate\Tables\PropertyTable
                 're_properties.author_type' => Vendor::class,
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -93,7 +93,7 @@ class PropertyTable extends \Modules\Plugins\RealEstate\Tables\PropertyTable
             $buttons = $this->addCreateButton(route('public.vendor.properties.create'), null);
         }
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Vendor::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Vendor::class);
     }
 
     /**

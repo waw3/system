@@ -151,7 +151,7 @@ class CategoryTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('categories.create'), 'categories.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Category::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Category::class);
     }
 
     /**

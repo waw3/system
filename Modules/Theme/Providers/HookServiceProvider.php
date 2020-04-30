@@ -13,7 +13,7 @@ class HookServiceProvider extends ServiceProvider
     {
         add_filter('admin_dashboard_list', [$this, 'addStatsWidgets'], 29, 2);
 
-        add_filter(BASE_FILTER_AFTER_SETTING_CONTENT, [$this, 'addSetting'], 39, 1);
+        add_filter('base-filter-after-setting-content', [$this, 'addSetting'], 39, 1);
 
         theme_option()
             ->setArgs(['debug' => config('app.debug')])

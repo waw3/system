@@ -100,7 +100,7 @@ class LanguageServiceProvider extends ServiceProvider
 
             $defaultLanguage = Language::getDefaultLanguage(['lang_id']);
             if (!empty($defaultLanguage)) {
-                add_action(BASE_ACTION_META_BOXES, [$this, 'addLanguageBox'], 50, 2);
+                add_action('meta_boxes', [$this, 'addLanguageBox'], 50, 2);
                 add_filter('slug-prefix-filter', [$this, 'setSlugPrefix'], 500, 1);
                 add_action(BASE_ACTION_TOP_FORM_CONTENT_NOTIFICATION, [$this, 'addCurrentLanguageEditingAlert'], 55, 3);
                 add_action(BASE_ACTION_BEFORE_EDIT_CONTENT, [$this, 'getCurrentAdminLanguage'], 55, 2);
@@ -123,8 +123,8 @@ class LanguageServiceProvider extends ServiceProvider
                 if (!is_in_admin()) {
                     add_filter(BASE_FILTER_GROUP_PUBLIC_ROUTE, [$this, 'addLanguageMiddlewareToPublicRoute'], 958, 1);
                 }
-                add_filter(BASE_FILTER_TABLE_BUTTONS, [$this, 'addLanguageSwitcherToTable'], 247, 2);
-                add_filter(BASE_FILTER_TABLE_QUERY, [$this, 'getDataByCurrentLanguage'], 157, 2);
+                add_filter('base_filter_datatables_buttons', [$this, 'addLanguageSwitcherToTable'], 247, 2);
+                add_filter('base_filter_datatables_query', [$this, 'getDataByCurrentLanguage'], 157, 2);
                 add_filter('admin_dashboard_notifications', [$this, 'registerAdminAlert'], 2, 1);
                 add_filter(BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM, [$this, 'checkItemLanguageBeforeGetAdminListItem'],
                     50, 3);

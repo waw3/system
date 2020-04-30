@@ -1,20 +1,28 @@
 <?php
 
+/*
 if (!defined('AUTH_MODULE_SCREEN_NAME')) {
     define('AUTH_MODULE_SCREEN_NAME', 'auth');
 }
+*/
 
+/*
 if (!defined('USER_MODULE_SCREEN_NAME')) {
     define('USER_MODULE_SCREEN_NAME', 'user');
 }
+*/
 
+/*
 if (!defined('SUPER_USER_MODULE_SCREEN_NAME')) {
     define('SUPER_USER_MODULE_SCREEN_NAME', 'super_user');
 }
+*/
 
+/*
 if (!defined('ROLE_MODULE_SCREEN_NAME')) {
     define('ROLE_MODULE_SCREEN_NAME', 'role');
 }
+*/
 
 /*
 if (!defined('AUTH_ACTION_AFTER_LOGOUT_SYSTEM')) {
@@ -22,9 +30,11 @@ if (!defined('AUTH_ACTION_AFTER_LOGOUT_SYSTEM')) {
 }
 */
 
+/*
 if (!defined('USER_ACTION_AFTER_UPDATE_PROFILE')) {
     define('USER_ACTION_AFTER_UPDATE_PROFILE', 'action_after_update_profile');
 }
+*/
 
 /*
 if (!defined('USER_ACTION_AFTER_UPDATE_PASSWORD')) {
@@ -32,13 +42,17 @@ if (!defined('USER_ACTION_AFTER_UPDATE_PASSWORD')) {
 }
 */
 
+/*
 if (!defined('ACL_FILTER_PROFILE_FORM_TABS')) {
     define('ACL_FILTER_PROFILE_FORM_TABS', 'acl_filter_profile_tabs');
 }
+*/
 
+/*
 if (!defined('ACL_FILTER_PROFILE_FORM_TAB_CONTENTS')) {
     define('ACL_FILTER_PROFILE_FORM_TAB_CONTENTS', 'acl_filter_profile_tab_contents');
 }
+*/
 
 /*
 if (!defined('ACL_ROLE_SUPER_USER')) {
@@ -52,6 +66,8 @@ if (!defined('ACL_ROLE_MANAGE_SUPERS')) {
 }
 */
 
+/*
 if (!defined('ACL_FILTER_USER_TABLE_ACTIONS')) {
     define('ACL_FILTER_USER_TABLE_ACTIONS', 'user_table_actions');
 }
+*/

@@ -129,7 +129,7 @@ class CityTable extends TableAbstract
             'cities.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -181,7 +181,7 @@ class CityTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('city.create'), 'city.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, City::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, City::class);
     }
 
     /**

@@ -152,7 +152,7 @@ class ProCategoryTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('procategories.create'), 'procategories.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, ProCategory::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, ProCategory::class);
     }
 
     /**

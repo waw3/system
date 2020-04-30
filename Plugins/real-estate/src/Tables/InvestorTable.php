@@ -94,7 +94,7 @@ class InvestorTable extends TableAbstract
             're_investors.status',
         ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+        return $this->applyScopes(apply_filters('base_filter_datatables_query', $query, $model));
     }
 
     /**
@@ -136,7 +136,7 @@ class InvestorTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('investor.create'), 'investor.create');
 
-        return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Investor::class);
+        return apply_filters('base_filter_datatables_buttons', $buttons, Investor::class);
     }
 
     /**
