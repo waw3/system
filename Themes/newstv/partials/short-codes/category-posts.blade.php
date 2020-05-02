@@ -3,9 +3,9 @@
     <div class="main-left">
         @foreach (get_all_categories(['categories.status' => \Modules\Base\Enums\BaseStatusEnum::PUBLISHED, 'categories.parent_id' => 0, 'is_featured' => 1]) as $category)
             @php
-                $allRelatedCategoryIds = array_unique(array_merge(app(\Modules\Plugins\Blog\Repositories\Interfaces\CategoryInterface::class)->getAllRelatedChildrenIds($category), [$category->id]));
+                $allRelatedCategoryIds = array_unique(array_merge(app(\Modules\Blog\Repositories\Interfaces\CategoryInterface::class)->getAllRelatedChildrenIds($category), [$category->id]));
 
-                $posts = app(\Modules\Plugins\Blog\Repositories\Interfaces\PostInterface::class)->getByCategory($allRelatedCategoryIds, 0, $loop->index % 2 == 0 ? 6 : 5);
+                $posts = app(\Modules\Blog\Repositories\Interfaces\PostInterface::class)->getByCategory($allRelatedCategoryIds, 0, $loop->index % 2 == 0 ? 6 : 5);
             @endphp
             <section class="main-box">
                 <div class="main-box-header">

@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Modules\Plugins\Blog\Models\Post;
+use Modules\Blog\Models\Post;
 use Illuminate\Http\Request;
 
 register_sidebar([

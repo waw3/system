@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/language",
+    "description": "Multilingual for Botble CMS",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Language\\Providers\\LanguageServiceProvider",
+                "Modules\\Language\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Language": "Modules\\Language\\Facades\\LanguageFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Language\\": ""
+        }
+    }
+}

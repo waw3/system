@@ -20,7 +20,7 @@ class RevisionsTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 44,
                 'user_id' => 1,
                 'key' => 'featured',
@@ -32,7 +32,7 @@ class RevisionsTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 48,
                 'user_id' => 1,
                 'key' => 'image',
@@ -44,7 +44,7 @@ class RevisionsTableSeeder extends Seeder
             2 => 
             array (
                 'id' => 3,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'featured',
@@ -56,7 +56,7 @@ class RevisionsTableSeeder extends Seeder
             3 => 
             array (
                 'id' => 4,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 50,
                 'user_id' => 1,
                 'key' => 'featured',
@@ -68,7 +68,7 @@ class RevisionsTableSeeder extends Seeder
             4 => 
             array (
                 'id' => 5,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 54,
                 'user_id' => 1,
                 'key' => 'featured',
@@ -80,7 +80,7 @@ class RevisionsTableSeeder extends Seeder
             5 => 
             array (
                 'id' => 6,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 54,
                 'user_id' => 1,
                 'key' => 'featured',
@@ -104,7 +104,7 @@ class RevisionsTableSeeder extends Seeder
             7 => 
             array (
                 'id' => 8,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 53,
                 'user_id' => 1,
                 'key' => 'name',
@@ -116,7 +116,7 @@ class RevisionsTableSeeder extends Seeder
             8 => 
             array (
                 'id' => 9,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 53,
                 'user_id' => 1,
                 'key' => 'description',
@@ -128,7 +128,7 @@ class RevisionsTableSeeder extends Seeder
             9 => 
             array (
                 'id' => 10,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 46,
                 'user_id' => 1,
                 'key' => 'name',
@@ -140,7 +140,7 @@ class RevisionsTableSeeder extends Seeder
             10 => 
             array (
                 'id' => 11,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 46,
                 'user_id' => 1,
                 'key' => 'description',
@@ -152,7 +152,7 @@ class RevisionsTableSeeder extends Seeder
             11 => 
             array (
                 'id' => 12,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 51,
                 'user_id' => 1,
                 'key' => 'name',
@@ -164,7 +164,7 @@ class RevisionsTableSeeder extends Seeder
             12 => 
             array (
                 'id' => 13,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 51,
                 'user_id' => 1,
                 'key' => 'description',
@@ -176,7 +176,7 @@ class RevisionsTableSeeder extends Seeder
             13 => 
             array (
                 'id' => 14,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'name',
@@ -188,7 +188,7 @@ class RevisionsTableSeeder extends Seeder
             14 => 
             array (
                 'id' => 15,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'description',
@@ -200,7 +200,7 @@ class RevisionsTableSeeder extends Seeder
             15 => 
             array (
                 'id' => 16,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 53,
                 'user_id' => 1,
                 'key' => 'image',
@@ -212,7 +212,7 @@ class RevisionsTableSeeder extends Seeder
             16 => 
             array (
                 'id' => 17,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 53,
                 'user_id' => 1,
                 'key' => 'image',
@@ -224,7 +224,7 @@ class RevisionsTableSeeder extends Seeder
             17 => 
             array (
                 'id' => 18,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'image',
@@ -236,7 +236,7 @@ class RevisionsTableSeeder extends Seeder
             18 => 
             array (
                 'id' => 19,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'image',
@@ -248,7 +248,7 @@ class RevisionsTableSeeder extends Seeder
             19 => 
             array (
                 'id' => 20,
-                'revisionable_type' => 'Modules\\Plugins\\Blog\\Models\\Post',
+                'revisionable_type' => 'Modules\\Blog\\Models\\Post',
                 'revisionable_id' => 49,
                 'user_id' => 1,
                 'key' => 'image',

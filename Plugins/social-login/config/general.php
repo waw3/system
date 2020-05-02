@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Plugins\Member\Models\Member;
+use Modules\Member\Models\Member;
 
 return [
     'supported' => [

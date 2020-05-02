@@ -272,7 +272,7 @@ trait ModuleServiceProvider
         if(is_dir($module->getPath() . DS . 'Config'))
         {
             foreach (File::allFiles($module->getPath() . DS . 'Config') as $file){
-                $this->mergeConfigFrom($file, "modules." . $module->getLowerName() . "." . strtolower(File::name($file)));
+                $this->mergeConfigFrom($file, "modules." . $module->getAlias() . "." . strtolower(File::name($file)));
     		}
         }
     }
@@ -302,15 +302,15 @@ trait ModuleServiceProvider
     private function registerModuleViewNamespace(ModuleGeneratorModule $module)
     {
 
-        $viewPath = resource_path('views/modules/' . $module->getLowerName());
+        $viewPath = resource_path('views/modules/' . $module->getAlias());
         $sourcePath = modules_path($module->getName() . '/Resources/views');
 
         $this->publishes([
             $sourcePath => $viewPath
-        ], ['views', $module->getLowerName() . '-module-views']);
+        ], ['views', $module->getAlias() . '-module-views']);
 
 
-        $this->loadViewsFrom(array_merge($this->getPublishableViewPaths($module), [$sourcePath]), "modules." . $module->getLowerName());
+        $this->loadViewsFrom(array_merge($this->getPublishableViewPaths($module), [$sourcePath]), "modules." . $module->getAlias());
 
     }
 
@@ -325,7 +325,7 @@ trait ModuleServiceProvider
             $sourcePath = $module->getPath() . '/Resources/public';
 
             if(is_dir($sourcePath))
-                $this->publishes([$sourcePath => public_path('assets/modules/' . $module->getLowerName())], $module->getLowerName() . '-public');
+                $this->publishes([$sourcePath => public_path('assets/modules/' . $module->getAlias())], $module->getAlias() . '-public');
         }
 
         return $this;
@@ -341,8 +341,8 @@ trait ModuleServiceProvider
     {
         $paths = [];
         foreach (\Config::get('view.paths') as $path) {
-            if (is_dir($path . '/modules/' . $module->getLowerName())) {
-                $paths[] = $path . '/modules/' . $module->getLowerName();
+            if (is_dir($path . '/modules/' . $module->getAlias())) {
+                $paths[] = $path . '/modules/' . $module->getAlias();
             }
         }
         return $paths;
@@ -376,12 +376,12 @@ trait ModuleServiceProvider
      */
     private function registerModuleLanguageNamespace(ModuleGeneratorModule $module)
     {
-        $langPath = resource_path('lang/modules/' . $module->getLowerName());
+        $langPath = resource_path('lang/modules/' . $module->getAlias());
 
         if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, $module->getLowerName());
+            $this->loadTranslationsFrom($langPath, $module->getAlias());
         } else {
-            $this->loadTranslationsFrom(module_path($module->getName(), 'Resources/lang'), "modules." . $module->getLowerName());
+            $this->loadTranslationsFrom(module_path($module->getName(), 'Resources/lang'), "modules." . $module->getAlias());
         }
     }
 

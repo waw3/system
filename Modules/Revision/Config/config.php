@@ -5,7 +5,7 @@ return [
 
     // List supported modules or plugins
     'supported' => [
-        'Modules\Plugins\Blog\Models\Post',
+        'Modules\Blog\Models\Post',
         'Modules\Page\Models\Page',
     ],
 ];

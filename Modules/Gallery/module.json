@@ -1,0 +1,22 @@
+{
+    "name": "Gallery",
+    "alias": "gallery",
+    "description": "Create or easy to add gallery images to posts, pages...",
+    "keywords": [],
+    "active": 1,
+    "type": "plugin",
+    "version": "5.2",
+    "order": 5,
+    "providers": [
+        "Modules\\Gallery\\Providers\\GalleryServiceProvider",
+        "Modules\\Gallery\\Providers\\RouteServiceProvider",
+        "Modules\\Gallery\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "Gallery": "Modules\\Gallery\\Facades\\GalleryFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

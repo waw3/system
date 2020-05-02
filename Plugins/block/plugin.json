@@ -1,9 +1,0 @@
-{
-    "name": "Block",
-    "namespace": "Modules\\Plugins\\Block\\",
-    "provider": "Modules\\Plugins\\Block\\Providers\\BlockServiceProvider",
-    "author": "William Whitmire",
-    "url": "https://krackenlabs.com",
-    "version": "5.2",
-    "description": "Manage static block (HTML, Text) on your theme"
-}

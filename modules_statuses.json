@@ -24,5 +24,12 @@
     "Theme": true,
     "ThemeGenerator": true,
     "Widget": true,
-    "WidgetGenerator": true
+    "WidgetGenerator": true,
+    "Blog": true,
+    "Gallery": true,
+    "CustomField": true,
+    "Block": true,
+    "Member": true,
+    "Translation": true,
+    "Language": true
 }

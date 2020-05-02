@@ -2,17 +2,19 @@
 
 namespace Modules\Plugins\SocialLogin\Http\Controllers;
 
-use Assets;
-use Modules\Plugins\Member\Repositories\Interfaces\MemberInterface;
-use Illuminate\Support\Facades\Auth;
+use Assets, Socialite, Exception, Auth;
+use Illuminate\Support\Str;
+use Modules\Member\Repositories\Interfaces\MemberInterface;
 use Modules\Base\Http\Controllers\BaseController;
 use Modules\Base\Http\Responses\BaseHttpResponse;
 use Modules\Setting\Supports\SettingStore;
 use Modules\Plugins\SocialLogin\Http\Requests\SocialLoginRequest;
-use Exception;
-use Illuminate\Support\Str;
-use Socialite;
 
+/**
+ * SocialLoginController class.
+ *
+ * @extends BaseController
+ */
 class SocialLoginController extends BaseController
 {
 

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Schema, Carbon;
+use Illuminate\Routing\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -65,6 +66,34 @@ class AppServiceProvider extends ServiceProvider
         \Illuminate\Pagination\AbstractPaginator::defaultSimpleView('pagination::simple-bootstrap-4');
 
         Schema::defaultStringLength(191);
+
+
+
+
+/*
+        $registrar = new \App\Overrides\Illuminate\Routing\RouteRegistrar($this->app['router']);
+        $this->app->bind('Illuminate\Routing\RouteRegistrar', function () use ($registrar) {
+            return $registrar;
+        });
+*/
+
+
+        if (! Route::hasMacro('permission')) {
+            Route::macro('permission', function ($permission) {
+                $this->action['permission'] = isset($this->action['permission']) ? $this->action['permission'].$permission : $permission;
+
+                return $this;
+            });
+        }
+
+
+//         $registrar = new \App\Overrides\Illuminate\Routing\ResourceRegistrar($this->app['router']);
+        // Route::resource('demo', 'DemoController', ['where' => ['demo' => '[0-9]+']]);
+/*
+        $this->app->bind('Illuminate\Routing\ResourceRegistrar', function () use ($registrar) {
+            return $registrar;
+        });
+*/
     }
 
     /**

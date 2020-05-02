@@ -204,6 +204,19 @@ return [
         Router::resource($module, $controllerName, array_merge($onlyOptions, $options));
     },
 
+
+    /**
+     * breadcrumb function.
+     *
+     * @access public
+     * @param mixed $title
+     * @return void
+     */
+    'permission' => function ($permission) {
+        $this->action['permission'] = $permission;
+        return $this;
+    },
+
     /**
      * admin function.
      *

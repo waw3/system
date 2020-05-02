@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/member",
+    "description": "Manage member, user register/login",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Member\\Providers\\MemberServiceProvider",
+                "Modules\\Member\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Member\\": ""
+        }
+    }
+}

@@ -4,7 +4,7 @@ namespace Theme\FlexHome\Http\Controllers;
 
 use Modules\Base\Enums\BaseStatusEnum;
 use Modules\Base\Http\Responses\BaseHttpResponse;
-use Modules\Plugins\Blog\Repositories\Interfaces\PostInterface;
+use Modules\Blog\Repositories\Interfaces\PostInterface;
 use Modules\Plugins\Career\Models\Career;
 use Modules\Plugins\Career\Repositories\Interfaces\CareerInterface;
 use Modules\Page\Repositories\Interfaces\PageInterface;

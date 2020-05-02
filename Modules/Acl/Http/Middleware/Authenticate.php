@@ -28,6 +28,8 @@ class Authenticate extends BaseAuthenticate
         if (!$guards) {
             $route = $request->route()->getAction();
 
+//             dd($route);
+
             $flag = Arr::get($route, 'permission', Arr::get($route, 'as'));
 
             if ($flag && !$request->user()->hasAnyPermission((array)$flag)) {

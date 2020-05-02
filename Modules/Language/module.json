@@ -1,0 +1,21 @@
+{
+    "name": "Language",
+    "alias": "language",
+    "description": "Multilingual for Botble CMS",
+    "keywords": [],
+    "active": 1,
+    "order": 5,
+    "version": "5.2",
+    "type": "plugin",
+    "providers": [
+        "Modules\\Language\\Providers\\LanguageServiceProvider",
+        "Modules\\Language\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "Language": "Modules\\Language\\Facades\\LanguageFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

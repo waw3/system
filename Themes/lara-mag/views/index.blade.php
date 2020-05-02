@@ -33,9 +33,9 @@
             @if (is_plugin_active('blog'))
                 @foreach (get_all_categories(['categories.status' => \Modules\Base\Enums\BaseStatusEnum::PUBLISHED, 'categories.parent_id' => 0, 'is_featured' => 1]) as $category)
                     @php
-                        $allRelatedCategoryIds = array_unique(array_merge(app(\Modules\Plugins\Blog\Repositories\Interfaces\CategoryInterface::class)->getAllRelatedChildrenIds($category), [$category->id]));
+                        $allRelatedCategoryIds = array_unique(array_merge(app(\Modules\Blog\Repositories\Interfaces\CategoryInterface::class)->getAllRelatedChildrenIds($category), [$category->id]));
 
-                        $post_categories = app(\Modules\Plugins\Blog\Repositories\Interfaces\PostInterface::class)->getByCategory($allRelatedCategoryIds, 0, 6);
+                        $post_categories = app(\Modules\Blog\Repositories\Interfaces\PostInterface::class)->getByCategory($allRelatedCategoryIds, 0, 6);
                     @endphp
                     <section class="block-post-wrap-item block-post1-wrap-item fleft bsize">
                     <section class="block-post-wrap-head sidebar-item-head tf">
@@ -85,7 +85,7 @@
                 @if (!$galleries->isEmpty())
                         <section class="block-post-wrap-item block-post1-wrap-item fleft bsize" style="width: 100%;">
                         <section class="block-post-wrap-head sidebar-item-head tf">
-                            <span><i class="fa fa-tags" aria-hidden="true"></i>{{ trans('modules.plugins.gallery::gallery.galleries') }}</span>
+                            <span><i class="fa fa-tags" aria-hidden="true"></i>{{ trans('modules.gallery::gallery.galleries') }}</span>
                         </section><!-- end .sidebar-item-head -->
                             <section class="block-post-wrap-content">
                                 <div class="gallery-wrap">

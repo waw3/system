@@ -1,0 +1,22 @@
+{
+    "name": "CustomField",
+    "alias": "custom-field",
+    "description": "Custom Fields",
+    "keywords": [],
+    "type": "plugin",
+    "version": "5.2",
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\CustomField\\Providers\\CustomFieldServiceProvider",
+        "Modules\\CustomField\\Providers\\RouteServiceProvider",
+        "Modules\\CustomField\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "CustomField": "Modules\\CustomField\\Facades\\CustomFieldFacade"
+    },
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

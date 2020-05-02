@@ -276,6 +276,16 @@ class BaseServiceProvider extends ServiceProvider
     private function registerGlobalModuleDependents()
     {
 
+/*
+
+        foreach ($this->app['modules']->getOrdered() as $module) {
+            echo $module->getAlias() . ' = ' . $module->getLowerName() . '<br>';
+
+        }
+
+        dd($this->app['modules']->getOrdered());
+*/
+
         foreach ($this->app['modules']->getOrdered() as $module) {
             $this->registerModuleConfig($module);
             $this->registerModuleMigration($module);

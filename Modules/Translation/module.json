@@ -1,0 +1,19 @@
+{
+    "name": "Translation",
+    "alias": "translation",
+    "description": "Manage translation text",
+    "keywords": [],
+    "version": "5.2",
+    "type": "plugin",
+    "active": 1,
+    "order": 5,
+    "providers": [
+        "Modules\\Translation\\Providers\\TranslationServiceProvider",
+        "Modules\\Translation\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Plugins\Blog\Models\Post;
+use Modules\Blog\Models\Post;
 
 return [
     'supported' => [

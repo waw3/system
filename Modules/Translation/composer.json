@@ -1,0 +1,26 @@
+{
+    "name": "krackenlabs/translation",
+    "description": "Manage translation text",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Translation\\Providers\\TranslationServiceProvider",
+                "Modules\\Translation\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Translation\\": ""
+        }
+    }
+}

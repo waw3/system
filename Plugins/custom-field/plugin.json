@@ -1,9 +1,0 @@
-{
-    "name": "Custom Fields",
-    "namespace": "Modules\\Plugins\\CustomField\\",
-    "provider": "Modules\\Plugins\\CustomField\\Providers\\CustomFieldServiceProvider",
-    "author": "William Whitmire",
-    "url": "https://krackenlabs.com",
-    "version": "5.2",
-    "description": "Custom Fields"
-}

@@ -1,0 +1,19 @@
+{
+    "name": "Member",
+    "alias": "member",
+    "description": "Manage member, user register/login",
+    "keywords": [],
+    "active": 1,
+    "type": "plugin",
+    "version": "5.2",
+    "order": 5,
+    "providers": [
+        "Modules\\Member\\Providers\\MemberServiceProvider",
+        "Modules\\Member\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "functions.php"
+    ],
+    "requires": []
+}

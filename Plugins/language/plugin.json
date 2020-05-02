@@ -1,9 +1,0 @@
-{
-    "name": "Language",
-    "namespace": "Modules\\Plugins\\Language\\",
-    "provider": "Modules\\Plugins\\Language\\Providers\\LanguageServiceProvider",
-    "author": "William Whitmire",
-    "url": "https://krackenlabs.com",
-    "version": "5.2",
-    "description": "Multilingual for Botble CMS"
-}

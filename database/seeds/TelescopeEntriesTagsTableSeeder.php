@@ -9211,7 +9211,7 @@ class TelescopeEntriesTagsTableSeeder extends Seeder
             337 => 
             array (
                 'entry_uuid' => '905a7ed5-ae67-456d-8fb2-350b531a18f7',
-                'tag' => 'Modules\\Plugins\\Blog\\Models\\Category:12',
+                'tag' => 'Modules\\Blog\\Models\\Category:12',
             ),
             338 => 
             array (
@@ -9906,7 +9906,7 @@ class TelescopeEntriesTagsTableSeeder extends Seeder
             476 => 
             array (
                 'entry_uuid' => '905a7ee5-b982-4f47-b5e7-b39570fb6a78',
-                'tag' => 'Modules\\Plugins\\Blog\\Models\\Category:12',
+                'tag' => 'Modules\\Blog\\Models\\Category:12',
             ),
             477 => 
             array (
@@ -11273,7 +11273,7 @@ class TelescopeEntriesTagsTableSeeder extends Seeder
             249 => 
             array (
                 'entry_uuid' => '905a7f4e-d577-4fb1-bb34-287ec77e3dca',
-                'tag' => 'Modules\\Plugins\\Blog\\Models\\Category:12',
+                'tag' => 'Modules\\Blog\\Models\\Category:12',
             ),
             250 => 
             array (
@@ -47588,7 +47588,7 @@ class TelescopeEntriesTagsTableSeeder extends Seeder
             6 => 
             array (
                 'entry_uuid' => '906a8265-fc3f-44d9-ad64-37f07952a206',
-                'tag' => 'Modules\\Plugins\\Blog\\Models\\Post:53',
+                'tag' => 'Modules\\Blog\\Models\\Post:53',
             ),
             7 => 
             array (
@@ -73633,7 +73633,7 @@ class TelescopeEntriesTagsTableSeeder extends Seeder
             211 => 
             array (
                 'entry_uuid' => '906b6f10-ede9-4c2b-a341-e0bd2253d83c',
-                'tag' => 'Modules\\Plugins\\Blog\\Models\\Post:53',
+                'tag' => 'Modules\\Blog\\Models\\Post:53',
             ),
             212 => 
             array (

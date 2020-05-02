@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/gallery",
+    "description": "Create or easy to add gallery images to posts, pages...",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Gallery\\Providers\\GalleryServiceProvider",
+                "Modules\\Gallery\\Providers\\RouteServiceProvider",
+                "Modules\\Gallery\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+                "Gallery": "Modules\\Gallery\\Facades\\GalleryFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Gallery\\": ""
+        }
+    }
+}

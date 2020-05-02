@@ -3,7 +3,7 @@
 namespace Modules\Plugins\Location\Seeders;
 
 use Artisan;
-use Modules\Plugins\Language\Models\LanguageMeta;
+use Modules\Language\Models\LanguageMeta;
 use Modules\Plugins\Location\Models\City;
 use Modules\Plugins\Location\Models\Country;
 use Modules\Plugins\Location\Models\State;

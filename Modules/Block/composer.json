@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/block",
+    "description": "Manage static block (HTML, Text) on your theme",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Block\\Providers\\BlockServiceProvider",
+                "Modules\\Block\\Providers\\RouteServiceProvider",
+                "Modules\\Block\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Block\\": ""
+        }
+    }
+}

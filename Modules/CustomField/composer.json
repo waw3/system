@@ -1,0 +1,27 @@
+{
+    "name": "krackenlabs/custom-field",
+    "description": "Custom Fields",
+    "authors": [
+        {
+            "name": "William Whitmire",
+            "email": "krackenlabs@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\CustomField\\Providers\\CustomFieldServiceProvider",
+                "Modules\\CustomField\\Providers\\RouteServiceProvider",
+                "Modules\\CustomField\\Providers\\HookServiceProvider"
+            ],
+            "aliases": {
+                "CustomField": "Modules\\CustomField\\Facades\\CustomFieldFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CustomField\\": ""
+        }
+    }
+}
